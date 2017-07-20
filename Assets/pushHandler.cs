@@ -19,7 +19,7 @@ public class pushHandler : MonoBehaviour {
 		
 	}
     void OnMouseDown() { 
-Debug.Log("test");
+        Debug.Log("test");
         AudioSource audio = GetComponent<AudioSource>();
         audio.Play();
     }
