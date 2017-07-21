@@ -17,16 +17,24 @@ public class pushHandler : MonoBehaviour {
 
 		
 	}
-    IEnumerator OnMouseDown() { 
+    void OnMouseDown() { 
         Debug.Log("test");
         AudioSource audio = GetComponent<AudioSource>();
         audio.Play();
 
         GetComponent<SpriteRenderer>().sprite = Resources.Load("Buttons/buttonpushed", typeof(Sprite)) as Sprite;
 
-        yield return new WaitForSeconds(.2F);
-        GetComponent<SpriteRenderer>().sprite = Resources.Load("Buttons/button", typeof(Sprite)) as Sprite;
-
+        //yield return new WaitForSeconds(.2F);
+        //GetComponent<SpriteRenderer>().sprite = Resources.Load("Buttons/button", typeof(Sprite)) as Sprite;
     }
 
-}
+    void OnMouseUp(){
+                GetComponent<SpriteRenderer>().sprite = Resources.Load("Buttons/button", typeof(Sprite)) as Sprite;
+    }
+}  
+
+
+
+
+
+
