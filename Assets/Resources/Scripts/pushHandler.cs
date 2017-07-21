@@ -9,7 +9,6 @@ public class pushHandler : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
     }
 
     // Update is called once per frame
@@ -22,5 +21,11 @@ public class pushHandler : MonoBehaviour {
         Debug.Log("test");
         AudioSource audio = GetComponent<AudioSource>();
         audio.Play();
+
+
+
+        Debug.Log(GetComponent<SpriteRenderer>().sprite);
+        GetComponent<SpriteRenderer>().sprite = Resources.Load("Buttons/buttonpushed", typeof(Sprite)) as Sprite; 
+        Debug.Log(GetComponent<SpriteRenderer>().sprite);   
     }
 }
