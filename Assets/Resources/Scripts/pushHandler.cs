@@ -7,18 +7,31 @@ public class pushHandler : MonoBehaviour {
     int i = 0;
 
     public AudioSource[] insults;
+    public AudioSource[] SFWInsults;
 
     public AudioClip[] testinsult;
 
 // Use this for initialization
 void Start () {
         Debug.Log("test");
-        testinsult = Resources.LoadAll<AudioClip>("Sounds/");
+        testinsult = Resources.LoadAll<AudioClip>("SFWSounds/");
         Debug.Log(testinsult[1]);
     }
 
     // Update is called once per frame
     void Update () {
+    }
+
+    void switchToNSFW ()
+    {
+        testinsult = Resources.LoadAll<AudioClip>("NSFWSounds/");
+
+    }
+
+    void switchToSFW()
+    {
+        testinsult = Resources.LoadAll<AudioClip>("SFWSounds/");
+
     }
 
     void OnMouseDown() {
